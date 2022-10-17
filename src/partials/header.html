@@ -9,14 +9,26 @@
     <title>Template</title>
 
     <style>
+
+        #_main-nav > nav > ul > li.show > a { font-weight: bold; }
+        #_main-nav > nav > ul > li > a { font-size: 0.9rem; }
+        #_main-nav > nav > ul > li > ul {  padding: 20px 0px; border: 0px }
+        #_main-nav > nav > ul > li > ul > li { padding: 0px 20px;}
+        #_main-nav > nav > ul > li > ul > li > a.dropdown-item {  border-bottom:1px solid #2167B2; box-sizing: border-box;font-size: 0.9em; padding: 10px 5px; }
+        #_main-nav > nav > ul > li > ul > li > a.dropdown-item:hover,
+            #_main-nav > nav > ul > li > ul > li:hover { background-color: transparent; background-color: #2167B2;}
+        
+
         #_utility_nav > ul > li > a { margin: 1rem 1rem; padding: 0; box-sizing: border-box; }
         #_utility_nav > ul > li > a.nav-link {  color: black; font-size:0.8em; }
-        #_utility_nav > ul > li > a.nav-link:hover {   color: black; font-size:0.8em; font-weight: bold;}
-        #_utility_nav > ul > li.active > a{  font-size:0.8em; color: black; font-size:0.9em; font-weight: bold; border-bottom:4px solid #895E00;; }
+        #_utility_nav > ul > li > a.nav-link:hover,
+        #_utility_nav > ul > li > a.nav-link:active {   color: black; font-size:0.8em; font-weight: bold;}
+        #_utility_nav > ul > li.active > a {  font-size:0.8em; color: black; font-size:0.9em; font-weight: bold; border-bottom:4px solid #895E00;; }
         
         .nav-login-btn { 
             background-color: #C3DBF4;
             color: #004A98;
+            font-size: 0.8rem;
         }
 
         .nav-login-btn:hover { 
@@ -36,7 +48,7 @@
         <div class="row align-items-center no gutters">
             <div class="col col-sm-auto">
                 <a id="branc" class="navbar-brand" href="#">
-                    <img src="https://via.placeholder.com/180x80" />
+                    <img src="https://via.placeholder.com/160x50" />
                 </a>
             </div>
             <div class="col d-none d-lg-block" id="_utility_nav">
@@ -59,8 +71,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="col col-lg-auto justify-content-end d-flex flex-nowrap">
-                <ul class="nav justify-content-end flex-nowrap">
+            <div class="col col-lg-auto justify-content-end d-flex">
+                <ul class="nav justify-content-end">
                     <li class="nav-item mr-3">
                         <a href="#" class="nav-link btn nav-login-btn" style="background-color: #C3DBF4; border:0px; font-weight: bold;">Login</a>
                     </li>
@@ -76,46 +88,47 @@
             </div>
         </div>
     </div>
-</header>
-<div class="row no-gutters bg-primary align-items-center" style="min-height: 40px;">
-    <div class="container">
-        <div class="col-md-12">
-            <ul class="nav justify-content-end">
-
-                <!-- REPEAT UTILITY NAV CODE -->
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personal Banking</a>
-                    <div class="dropdown-menu bg-primary">
-                        <a class="dropdown-item text-light" href="#">Business Banking</a>
-                        <a class="dropdown-item text-light" href="#">Lending Solutions</a>
-                        <a class="dropdown-item text-light" href="#">Ag Services</a>
-                        <a class="dropdown-item text-light" href="#">Digital Banking Services</a>
-                    </div>
-                </li>
-                
-                <li class="nav-item mr-2">
-                    <a href="#" class="nav-link text-light">Business Banking</a>
-                </li>
-
-                <!-- REPEAT UTILITY NAV CODE -->
-
-                <li class="nav-item active">
-                    <a href="#" class="nav-link text-light">Lending Solutions</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">Ag Services</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">Digital Banking Services</a>
-                </li>
-                
-            </ul>
+    <div class="row no-gutters bg-primary" style="min-height: 40px;">
+        <div class="container">
+            <div class="col-md-12" id="_main-nav">
+                <nav class="navbar navbar-expand-lg align-items-center justify-content-end">
+                    <ul class="nav">
+                        <!-- REPEAT UTILITY NAV CODE -->
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personal Banking</a>
+                            <ul class="dropdown-menu bg-primary">
+                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
+                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
+                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
+                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
+                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
+                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Business Banking</a>
+                        </li>
+        
+                        <!-- REPEAT UTILITY NAV CODE -->
+        
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link text-light">Lending Solutions</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Ag Services</a>
+                        </li>
+        
+                        <li class="nav-item">
+                            <a href="#" class="nav-link text-light">Digital Banking Services</a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
-</div>
+    <div class="gold-gradient"></div>
+</header>
 
-<div class="row no-gutters align-items-center gold-gradient">
-</div>
