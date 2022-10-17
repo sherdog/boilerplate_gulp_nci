@@ -1,20 +1,7 @@
 $theme-colors: (
-    "primary": #091661,
-    "dark": #000000
+    "primary": #004A98,
+    "dark": #004A98
 );
 
-.dropdown-item {
-    @extend %dropdown-item;
-     background-color: red;
-    &.active,
-    &:active {
-      color: $dropdown-link-active-color;
-      background-color: red;
-      text-decoration: none;
-    }
-  }
-  
-
-
 @import "node_modules/bootstrap/scss/bootstrap";
-
+@import "node_modules/bootstrap/scss/_dropdown";
