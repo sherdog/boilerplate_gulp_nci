@@ -10,150 +10,185 @@
 
     <style>
 
-        #_main-nav > nav > ul > li.show > a { font-weight: bold; }
-        #_main-nav > nav > ul > li > a { font-size: 0.9rem; }
-        #_main-nav > nav > ul > li > ul {  padding: 20px 0px; border: 0px }
-        #_main-nav > nav > ul > li > ul > li { padding: 0px 20px;}
-        #_main-nav > nav > ul > li > ul > li > a.dropdown-item {  border-bottom:1px solid #2167B2; box-sizing: border-box;font-size: 0.9em; padding: 10px 5px; }
-        #_main-nav > nav > ul > li > ul > li > a.dropdown-item:hover,
-            #_main-nav > nav > ul > li > ul > li:hover { background-color: transparent; background-color: #2167B2;}
+        #_main-nav > ul > li.show > a { font-weight: bold; }
+        #_main-nav > ul > li > a { font-size: 0.9rem; }
+        #_main-nav > ul > li > ul { padding: 8px 0px 0px; border: 0px }
+        #_main-nav > ul > li > ul > li { padding: 0px 20px;}
+        #_main-nav > ul > li > ul > li > a.dropdown-item {  border-bottom:1px solid #2167B2; box-sizing: border-box;font-size: 0.9em; padding: 10px 5px; }
+        #_main-nav > ul > li > ul > li > a.dropdown-item:hover,
+            #_main-nav > ul > li > ul > li:hover { background-color: transparent; background-color: #2167B2; }
         
-
-        #_utility_nav > ul > li > a { margin: 1rem 1rem; padding: 0; box-sizing: border-box; }
-        #_utility_nav > ul > li > a.nav-link {  color: black; font-size:0.8em; }
+        #_utility_nav > ul > li { min-width: 90px; }
+        #_utility_nav > ul > li > a {  text-align: center; margin: 1rem; padding: 0; box-sizing: border-box; font-size:0.8em; }
+        #_utility_nav > ul > li > a.nav-link {  color: black;  }
         #_utility_nav > ul > li > a.nav-link:hover,
-        #_utility_nav > ul > li > a.nav-link:active {   color: black; font-size:0.8em; font-weight: bold;}
-        #_utility_nav > ul > li.active > a {  font-size:0.8em; color: black; font-size:0.9em; font-weight: bold; border-bottom:4px solid #895E00;; }
-        
+        #_utility_nav > ul > li > a.nav-link:active { font-weight: bold;}
+        #_utility_nav > ul > li.active > a { font-weight: bold; border-bottom:4px solid #895E00;  padding-right:0px; padding-left:0px; }
+        #_main-nav > ul > li > ul > li:last-child > a.dropdown-item { border-bottom:0px;}
+
         .nav-login-btn { 
-            background-color: #C3DBF4;
-            color: #004A98;
-            font-size: 0.8rem;
+            border: 0px;
+            font-weight: bold;
         }
 
         .nav-login-btn:hover { 
-            background-color: #E5F1FD !important;
-            color: #004A98;
+            background-color: #D5AB45 !important;
             margin-top:-3px;
+            border: 0px;
+            color:  #002042;
+            font-weight: bold;
         }
 
         .gold-gradient {
-            min-height:10px; font-size:10px; background-image: linear-gradient(to left, #ac8523, #bb9739, #caa84d, #d9bb61, #e8cd76, #e8cd76, #e8cd76, #e8cd76, #d9bb61, #caa84d, #bb9739, #ac8523);
+            min-height:10px; 
+            font-size:10px; 
+            background-image: linear-gradient(to left, #ac8523, #bb9739, #caa84d, #d9bb61, #e8cd76, #e8cd76, #e8cd76, #e8cd76, #d9bb61, #caa84d, #bb9739, #ac8523);
         }
+
         </style>
   </head>
 <body>
 <header class="mt-2 mb-2">
     <div class="container-fluid">
         <div class="row align-items-center no gutters">
+
             <div class="col col-sm-auto">
                 <a id="branc" class="navbar-brand" href="#">
                     <img src="https://via.placeholder.com/160x50" />
                 </a>
             </div>
-            <div class="col d-none d-lg-block" id="_utility_nav">
-                <ul class="nav flex-row flex-nowrap justify-content-end ">
+
+            <div class="col d-none d-md-block justify-content-end" id="_utility_nav">
+                <ul class="nav flex-row flex-nowrap justify-content-end">
                     
-                    <!-- REPEAT UTILITY NAV CODE -->
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Calculators</a>
-                    </li>
                     <!-- REPEAT UTILITY NAV CODE -->
 
                     <li class="nav-item active">
+                        <a href="#" class="nav-link">Calculators</a>
+                    </li>
+
+                    <!-- REPEAT UTILITY NAV CODE -->
+
+                    <li class="nav-item ">
                         <a href="#" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item">
+
+                    <!-- REPEAT UTILITY NAV CODE -->
+
+                    <li class="nav-item ">
                         <a href="#" class="nav-link">Locations</a>
                     </li>
+
+                    <!-- REPEAT UTILITY NAV CODE -->
+
                     <li class="nav-item">
                         <a href="#" class="nav-link">Contact</a>
                     </li>
+
                 </ul>
             </div>
-            <div class="col col-lg-auto justify-content-end d-flex">
-                <ul class="nav justify-content-end">
-                    <li class="nav-item mr-3">
-                        <a href="#" class="nav-link btn nav-login-btn" style="background-color: #C3DBF4; border:0px; font-weight: bold;">Login</a>
+            <div class="col col-lg-auto justify-content-end">
+                <ul class="nav justify-content-end flex-nowrap">
+                    
+                    <!-- Login Button-->
+
+                    <li class="nav-item mr-2">
+                        <a href="#" class="nav-link btn nav-login-btn pl-4 pr-4 btn-primary">Login</a>
                     </li>
-                     <li class="nav-item d-none d-lg-block ">
-                        <div id="app-search" class="input-group noflexwrap">
-                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+
+                    <!-- HAMBUHGAH Button-->
+
+                     <li class="nav-item d-none d-md-block">
+                        <div id="app-search" class="input-group">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="Search">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-home"></i></button>
                             </div>
                         </div>
                     </li>
+
+                    <!-- HAMBUHGAH Button-->
+
+                    <li class="nav-item d-md-none d-lg-none d-sm-inline">
+                        <button 
+                            class="navbar-toggler" 
+                            type="button" 
+                            data-toggle="collapse" 
+                            data-target="#navbarContainer" 
+                            aria-controls="navbarContainer" 
+                            aria-expanded="false" 
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </div>
-    <div class="row no-gutters bg-primary" style="min-height: 40px;">
-        <div class="container-fluid">
-            <div class="col-md-12" id="_main-nav">
-                <nav class="navbar navbar-expand-lg align-items-center justify-content-end">
-                    <ul class="nav">
-                        <!-- REPEAT UTILITY NAV CODE -->
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personal Banking</a>
-                            <ul class="dropdown-menu bg-primary">
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
-                            </ul>
-                        </li>
 
-                        <!-- REPEAT UTILITY NAV CODE -->
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Business Banking</a>
-                            <ul class="dropdown-menu bg-primary">
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
-                            </ul>
-                        </li>
-                        
-                        <!-- REPEAT UTILITY NAV CODE -->
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lending Solutions</a>
-                            <ul class="dropdown-menu bg-primary">
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
-                            </ul>
-                        </li>
-                        
-                        <!-- REPEAT UTILITY NAV CODE -->
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ag Services</a>
-                            <ul class="dropdown-menu bg-primary">
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
-                                <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link text-light">Digital Banking Services</a>
-                        </li>
-                        
+    <nav class="navbar navbar-expand-md align-items-center justify-content-end pl-0 pr-0 mt-0 mb-0 pt-0 pb-0" id="navbarContainer">
+        <div class="collapse navbar-collapse align-items-center justify-content-end bg-primary" id="_main-nav" style="height:50px;">
+            <ul class="nav">
+                <!-- REPEAT UTILITY NAV CODE -->
+                <li class="nav-item dropdown ">
+                    <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personal Banking</a>
+                    <ul class="dropdown-menu bg-primary">
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
                     </ul>
-                </nav>
-            </div>
+                </li>
+
+                <!-- REPEAT UTILITY NAV CODE -->
+                <li class="nav-item dropdown ">
+                    <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Business Banking</a>
+                    <ul class="dropdown-menu bg-primary">
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
+                    </ul>
+                </li>
+                
+                <!-- REPEAT UTILITY NAV CODE -->
+                <li class="nav-item dropdown ">
+                    <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Lending Solutions</a>
+                    <ul class="dropdown-menu bg-primary">
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
+                    </ul>
+                </li>
+                
+                <!-- REPEAT UTILITY NAV CODE -->
+                <li class="nav-item dropdown ">
+                    <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ag Services</a>
+                    <ul class="dropdown-menu bg-primary">
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Personal Checking & Savings</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Individual Retirement Accoutns (IRA)</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Health Savings Accounts (HSA)</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Certificates of Deposit</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Safe Deposit Boxes</a></li>
+                        <li class="nav-item"><a class="dropdown-item text-light" href="#">Debit Cards</a></li>
+                    </ul>
+                </li>
+
+                <!-- REPEAT UTILITY NAV CODE -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-light">Digital Banking Services</a>
+                </li>
+            </ul>
         </div>
-    </div>
-    <div class="gold-gradient"></div>
+    </nav>
+    <div class="gold-gradient d-none d-sm-none d-md-block"></div>
 </header>
 
