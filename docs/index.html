@@ -28,7 +28,7 @@
     
             .nav-login-btn { 
                 border: 0px;
-                font-weight: bold;
+                font-weight: normal;
             }
     
             .nav-login-btn:hover { 
@@ -49,14 +49,16 @@
     
     <body>
         <header class="mt-2 mb-2">
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row align-items-center no gutters">
-                    <div class="col col-sm-auto"> <a id="branc" class="navbar-brand" href="#">
+                    <!-- START LOGO -->
+                    <div class="col col-sm-auto"> <a id="brand" class="navbar-brand" href="#">
 
                     <img src="https://via.placeholder.com/160x50" />
 
                 </a>
                     </div>
+                    <!-- START UTILITY NAV -->
                     <div class="col d-none d-md-block justify-content-end" id="_utility_nav">
                         <ul class="nav flex-row flex-nowrap justify-content-end">
                             <!-- REPEAT UTILITY NAV CODE -->
@@ -73,6 +75,7 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- END UTILITY NAV -->
                     <div class="col col-lg-auto justify-content-end">
                         <ul class="nav justify-content-end flex-nowrap">
                             <!-- Login Button-->
@@ -100,6 +103,7 @@
                     </div>
                 </div>
             </div>
+            <!-- START MAIN NAV -->
             <nav class="navbar navbar-expand-md align-items-center justify-content-end pl-0 pr-0 mt-1 mb-0 pt-0 pb-0"
             id="navbarContainer">
                 <div class="collapse navbar-collapse align-items-center justify-content-end bg-primary"
@@ -211,6 +215,7 @@
                     </ul>
                 </div>
             </nav>
+            <!-- END MAIN NAV -->
             <div class="gold-gradient d-none d-sm-none d-md-block"></div>
         </header>
         <div class="jumbotron bg-white text-center justify-content-center align-items-center mb-0">

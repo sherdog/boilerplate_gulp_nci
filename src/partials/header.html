@@ -28,7 +28,7 @@
 
         .nav-login-btn { 
             border: 0px;
-            font-weight: bold;
+            font-weight: normal;
         }
 
         .nav-login-btn:hover { 
@@ -45,18 +45,22 @@
             background-image: linear-gradient(to left, #ac8523, #bb9739, #caa84d, #d9bb61, #e8cd76, #e8cd76, #e8cd76, #e8cd76, #d9bb61, #caa84d, #bb9739, #ac8523);
         }
 
-        </style>
+    </style>
   </head>
 <body>
 <header class="mt-2 mb-2">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row align-items-center no gutters">
 
+            <!-- START LOGO -->
+            
             <div class="col col-sm-auto">
-                <a id="branc" class="navbar-brand" href="#">
+                <a id="brand" class="navbar-brand" href="#">
                     <img src="https://via.placeholder.com/160x50" />
                 </a>
             </div>
+
+            <!-- START UTILITY NAV -->
 
             <div class="col d-none d-md-block justify-content-end" id="_utility_nav">
                 <ul class="nav flex-row flex-nowrap justify-content-end">
@@ -84,9 +88,11 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">Contact</a>
                     </li>
-
                 </ul>
             </div>
+
+            <!-- END UTILITY NAV -->
+
             <div class="col col-lg-auto justify-content-end">
                 <ul class="nav justify-content-end flex-nowrap">
                     
@@ -124,12 +130,16 @@
 
                 </ul>
             </div>
+
         </div>
     </div>
 
+    <!-- START MAIN NAV -->
     <nav class="navbar navbar-expand-md align-items-center justify-content-end pl-0 pr-0 mt-1 mb-0 pt-0 pb-0" id="navbarContainer">
         <div class="collapse navbar-collapse align-items-center justify-content-end bg-primary" id="_main-nav" style="height:44px;">
+            
             <ul class="nav">
+                
                 <!-- REPEAT UTILITY NAV CODE -->
                 <li class="nav-item dropdown ">
                     <a class="nav-link text-light dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Personal Banking</a>
@@ -186,9 +196,13 @@
                 <li class="nav-item">
                     <a href="#" class="nav-link text-light">Digital Banking Services</a>
                 </li>
+
             </ul>
         </div>
     </nav>
+    
+    <!-- END MAIN NAV -->
+
     <div class="gold-gradient d-none d-sm-none d-md-block"></div>
 </header>
 
